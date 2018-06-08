@@ -1,10 +1,10 @@
 # shadow-cljs, proto-repl, re-frame template
 
-The `shadow-cljs` is a build tool for ClojureScript.
+`shadow-cljs` is a build tool for ClojureScript.
 
-The `proto-repl` is a Clojure(Script) dev env for [Atom](https://atom.io/)
+`proto-repl` is a Clojure(Script) dev env for [Atom](https://atom.io/)
 
-The `re-frame` is a is a pattern for writing SPAs in ClojureScript, using Reagent. [Reagent](https://github.com/reagent-project/reagent).
+`re-frame` is a is a pattern for writing SPAs in ClojureScript, using Reagent. [Reagent](https://github.com/reagent-project/reagent).
 
 ## Setup And Run
 #### Copy repository

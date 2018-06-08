@@ -17,3 +17,13 @@
  :decrement
  (fn [db _]
     (update db :counter dec)))
+
+(rf/reg-event-db
+ :set-active-page
+ (fn [db [_ active-page]]
+  (assoc db :active-page active-page)))
+
+(rf/reg-event-db
+ :set-topic-id
+ (fn [db [_ topic-id]]
+   (assoc db :topic-id topic-id)))
