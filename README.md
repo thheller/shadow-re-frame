@@ -1,4 +1,4 @@
-# shadow-cljs, proto-repl, reagent template
+# shadow-cljs, proto-repl, re-frame template
 
 The `shadow-cljs` is a build tool for ClojureScript.
 
