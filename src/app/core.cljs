@@ -1,14 +1,18 @@
 (ns app.core
   (:require [reagent.core :as r]
             [re-frame.core :as rf]
-            [app.routes :as routes]
+            [app.router :as router]
             [app.events] ;; These two are required so that 
             [app.subs]   ;; the compailer loads them
             [app.views :as views]))
 
-(defn ^:export main
+(defn ^:dev/after-load start
   []
-  (routes/app-routes)
-  (rf/dispatch-sync [:initialise-db])
   (r/render [views/app]
             (.getElementById js/document "app")))
+
+(defn ^:export main
+  []
+  (start)
+  (router/app-routes)
+  (rf/dispatch-sync [:initialise-db]))

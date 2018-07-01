@@ -1,6 +1,6 @@
 (ns app.views
   (:require [re-frame.core :as rf]
-            [app.routes :as routes]))
+            [app.router :as router]))
 
 (defn header
   []
@@ -9,11 +9,11 @@
    [:div
     [:ul 
      [:li
-      [:a {:href (routes/url-for :home)} "Home"]]
+      [:a {:href (router/url-for :home)} "Home"]]
      [:li
-      [:a {:href (routes/url-for :about)} "About"]]
+      [:a {:href (router/url-for :about)} "About"]]
      [:li 
-      [:a {:href (routes/url-for :topics)} "Topics"]]]]])
+      [:a {:href (router/url-for :topics)} "Topics"]]]]])
 
 (defn home
   []
@@ -28,9 +28,9 @@
    [:h2 "topics"]
    [:ol
     [:li
-      [:a {:href (routes/url-for :topic :topic-id "cljs")} "ClojureScript"]]
+      [:a {:href (router/url-for :topic :topic-id "cljs")} "ClojureScript"]]
     [:li
-      [:a {:href (routes/url-for :topic :topic-id "clj")} "Clojure"]]]])
+      [:a {:href (router/url-for :topic :topic-id "clj")} "Clojure"]]]])
 
 (defn topic
   [params]
@@ -38,7 +38,7 @@
    [:div
     [:h2 "topics"]
     [:ul
-      [:li [:a {:href (routes/url-for :topics)} "back"]]
+      [:li [:a {:href (router/url-for :topics)} "back"]]
       [:li [:p topic-id]]]]))
 
 (defn counter

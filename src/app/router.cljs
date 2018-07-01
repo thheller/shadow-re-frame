@@ -1,4 +1,4 @@
-(ns app.routes
+(ns app.router
   (:require [bidi.bidi :as bidi]
             [pushy.core :as pushy]
             [re-frame.core :as rf]))
