@@ -13,7 +13,9 @@
      [:li
       [:a {:href (router/url-for :about)} "About"]]
      [:li 
-      [:a {:href (router/url-for :topics)} "Topics"]]]]])
+      [:a {:href (router/url-for :topics)} "Topics"]]
+     [:li 
+      [:a {:href (router/url-for :counter)} "Counter"]]]]])
 
 (defn home
   []

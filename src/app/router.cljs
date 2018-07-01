@@ -6,6 +6,7 @@
 (def routes 
   ["/" {""        :home
         "about"   :about
+        "counter" :counter
         "topics/" {""      :topics
                    [:topic-id] :topic}}])         
 
