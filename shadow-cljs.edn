@@ -19,11 +19,10 @@
         {:main
          {:entries [app.core]}}
         :compiler-options {:closure-warnings {:global-this :off}
-                           :closure-defines {"re_frame.trace.trace_enabled_QMARK_" true
-                                             "day8.re_frame.tracing.trace_enabled_QMARK_"  true}}
+                           :closure-defines {re-frame.trace/trace-enabled? true
+                                             day8.re-frame.tracing/trace-enabled? true}}
 
         :devtools
         {:http-root   "public"
          :http-port   3000
-         :preloads    [shadow.cljs.devtools.client.hud
-                       day8.re-frame-10x.preload]}}}}             
+         :preloads    [day8.re-frame-10x.preload]}}}}             
